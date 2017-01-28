@@ -163,10 +163,6 @@ function RM:ButtonFactory()
 		image:SetInside()
 		image:SetTexture(i == 9 and "Interface\\BUTTONS\\UI-GroupLoot-Pass-Up" or ("Interface\\TargetingFrame\\UI-RaidTargetingIcon_%d"):format(i))
 
-		local highlight = button:CreateTexture(nil, "HIGHLIGHT")
-		highlight:SetInside()
-		highlight:SetTexture(1, 1, 1, 0.30)
-
 		local target = buttonData.RT
 
 		if(target) then
@@ -181,6 +177,7 @@ function RM:ButtonFactory()
 			button:SetScript("OnLeave", function() GameTooltip:Hide() end)
 		end
 
+		button:StyleButton()
 		button:RegisterForClicks("AnyDown")
 		self.frame.buttons[i] = button
 	end
