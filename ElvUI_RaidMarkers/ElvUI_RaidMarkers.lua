@@ -154,14 +154,14 @@ function RM:ButtonFactory()
 		local button = CreateFrame("Button", ("ElvUI_RaidMarkersBarButton%d"):format(i), _G["ElvUI_RaidMarkersBar"], "SecureActionButtonTemplate")
 		button:SetHeight(BUTTON_HEIGHT)
 		button:SetWidth(BUTTON_WIDTH)
-		button:CreateBackdrop("Default", true)
+		button:SetTemplate("Default", true)
 
-		local image = button:CreateTexture(nil, "BACKGROUND")
-		image:SetAllPoints()
+		local image = button:CreateTexture(nil, "OVERLAY")
+		image:SetInside()
 		image:SetTexture(i == 9 and "Interface\\BUTTONS\\UI-GroupLoot-Pass-Up" or ("Interface\\TargetingFrame\\UI-RaidTargetingIcon_%d"):format(i))
 
 		local highlight = button:CreateTexture(nil, "HIGHLIGHT")
-		highlight:SetAllPoints(image)
+		highlight:SetInside()
 		highlight:SetTexture(1, 1, 1, 0.30)
 
 		local target = buttonData.RT
@@ -208,7 +208,7 @@ function RM:Initialize()
 	self.frame = CreateFrame("Frame", "ElvUI_RaidMarkersBar", E.UIParent, "SecureHandlerStateTemplate")
 	self.frame:SetResizable(false)
 	self.frame:SetClampedToScreen(true)
-	self.frame:CreateBackdrop("Transparent")
+	self.frame:SetTemplate("Transparent")
 
 	self.frame.buttons = {}
 	self:ButtonFactory()
