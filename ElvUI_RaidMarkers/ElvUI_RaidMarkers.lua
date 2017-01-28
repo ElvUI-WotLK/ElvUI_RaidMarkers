@@ -12,7 +12,9 @@ local RegisterStateDriver = RegisterStateDriver;
 -- Profile
 P["actionbar"]["raidmarkersbar"] = {
 	["visible"] = "auto",
-	["orient"] = "horizontal"
+	["orient"] = "horizontal",
+	["buttonSize"] = 18,
+	["buttonSpacing"] = 5
 }
 
 -- Config
@@ -20,6 +22,8 @@ local function InjectOptions()
 	E.Options.args.actionbar.args.raidmarkersbar = {
 		type = "group",
 		name = L["Raid Markers"],
+		get = function(info) return E.db.actionbar.raidmarkersbar[ info[#info] ]; end,
+		set = function(info, value) E.db.actionbar.raidmarkersbar[ info[#info] ] = value; RM:UpdateBar(); end,
 		args = {
 			header = {
 				order = 1,
@@ -35,9 +39,7 @@ local function InjectOptions()
 					["hide"] = L["Hide"],
 					["show"] = L["Show"],
 					["auto"] = L["Automatic"]
-				},
-				get = function() return RM.db.visible end,
-				set = function(_, value) RM.db.visible = value; RM:UpdateBar(); end
+				}
 			},
 			orient = {
 				order = 3,
@@ -47,9 +49,21 @@ local function InjectOptions()
 				values = {
 					["horizontal"] = L["Horizontal"],
 					["vertical"] = L["Vertical"]
-				},
-				get = function() return RM.db.orient end,
-				set = function(_, value) RM.db.orient = value; RM:UpdateBar(); end
+				}
+			},
+			buttonSize = {
+				order = 10,
+				type = "range",
+				name = L["Button Size"],
+				desc = L["The size of the action buttons."],
+				min = 15, max = 60, step = 1
+			},
+			buttonSpacing = {
+				order = 11,
+				type = "range",
+				name = L["Button Spacing"],
+				desc = L["The spacing between buttons."],
+				min = -1, max = 10, step = 1
 			}
 		}
 	}
@@ -89,11 +103,11 @@ function RM:UpdateBar(first)
 	local height, width = FRAME_HEIGHT, FRAME_WIDTH
 
 	if(self.db.orient == "vertical") then
-		width = BUTTON_WIDTH + 3
-		height = (BUTTON_HEIGHT * 9) + (BUTTON_DISTANCE * 9)
+		width = self.db.buttonSize + 3
+		height = (self.db.buttonSize * 9) + (self.db.buttonSpacing * 9)
 	else
-		width = (BUTTON_WIDTH * 9) + (BUTTON_DISTANCE * 9)
-		height = BUTTON_HEIGHT + 3
+		width = (self.db.buttonSize * 9) + (self.db.buttonSpacing * 9)
+		height = self.db.buttonSize + 3
 	end
 
 	if(first) then
@@ -107,19 +121,20 @@ function RM:UpdateBar(first)
 	for i = 9, 1, -1 do
 		local button = self.frame.buttons[i]
 		local prev = self.frame.buttons[i + 1]
+		button:Size(self.db.buttonSize);
 		button:ClearAllPoints()
 
 		if(self.db.orient == "vertical") then
 			if(i == 9) then
 				button:SetPoint("TOP", 0, -3)
 			else
-				button:SetPoint("TOP", prev, "BOTTOM", 0, -BUTTON_DISTANCE)
+				button:SetPoint("TOP", prev, "BOTTOM", 0, -self.db.buttonSpacing)
 			end
 		else
 			if(i == 9) then
 				button:SetPoint("LEFT", 3, 0)
 			else
-				button:SetPoint("LEFT", prev, "RIGHT", BUTTON_DISTANCE, 0)
+				button:SetPoint("LEFT", prev, "RIGHT", self.db.buttonSpacing, 0)
 			end
 		end
 	end
@@ -142,8 +157,6 @@ end
 function RM:ButtonFactory()
 	for i, buttonData in ipairs(buttonMap) do
 		local button = CreateFrame("Button", ("ElvUI_RaidMarkersBarButton%d"):format(i), _G["ElvUI_RaidMarkersBar"], "SecureActionButtonTemplate")
-		button:SetHeight(BUTTON_HEIGHT)
-		button:SetWidth(BUTTON_WIDTH)
 		button:SetTemplate("Default", true)
 
 		local image = button:CreateTexture(nil, "OVERLAY")
