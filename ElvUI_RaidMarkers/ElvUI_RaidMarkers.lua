@@ -6,6 +6,9 @@ local _G = _G
 local ipairs = ipairs;
 local format = string.format;
 
+local UnregisterStateDriver = UnregisterStateDriver;
+local RegisterStateDriver = RegisterStateDriver;
+
 -- Profile
 P["actionbar"]["raidmarkersbar"] = {
 	["visible"] = "auto",
@@ -61,7 +64,6 @@ local function InjectOptions()
 	}
 end
 
-local db
 local BUTTON_HEIGHT = 18
 local BUTTON_WIDTH = 18
 local BUTTON_DISTANCE = 5
