@@ -52,14 +52,14 @@ local function InjectOptions()
 				}
 			},
 			buttonSize = {
-				order = 10,
+				order = 4,
 				type = "range",
 				name = L["Button Size"],
 				desc = L["The size of the action buttons."],
 				min = 15, max = 60, step = 1
 			},
 			buttonSpacing = {
-				order = 11,
+				order = 5,
 				type = "range",
 				name = L["Button Spacing"],
 				desc = L["The spacing between buttons."],
