@@ -11,7 +11,6 @@ L["Orientation"] = true;
 L["Raid Markers Bar"] = true;
 L["Raid Markers"] = true;
 L["Select how the raid markers bar will be displayed."] = true;
-L["Show"] = true;
 
 if GetLocale() == "enUS" then return end
 
@@ -26,7 +25,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 -- Spanish
@@ -40,7 +38,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 -- French
@@ -54,7 +51,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 -- Korean
@@ -68,7 +64,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 -- Portuguese
@@ -82,7 +77,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 -- Russian
@@ -96,7 +90,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 --Chinese (China, simplified)
@@ -110,7 +103,6 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
 
 --Chinese (Taiwan, traditional)
@@ -124,5 +116,4 @@ if L then
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
-	L["Show"] = true;
 end
