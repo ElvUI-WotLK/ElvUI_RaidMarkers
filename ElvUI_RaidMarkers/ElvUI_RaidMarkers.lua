@@ -12,8 +12,7 @@ local RegisterStateDriver = RegisterStateDriver;
 -- Profile
 P["actionbar"]["raidmarkersbar"] = {
 	["visible"] = "auto",
-	["orient"] = "horizontal",
-	["scale"] = 1.0
+	["orient"] = "horizontal"
 }
 
 -- Config
@@ -51,14 +50,6 @@ local function InjectOptions()
 				},
 				get = function() return RM.db.orient end,
 				set = function(_, value) RM.db.orient = value; RM:UpdateBar(); end
-			},
-			scale = {
-				order = 4,
-				type = "range",
-				name = L["Scale"],
-				get = function() return RM.db.scale end,
-				set = function(_, value) RM.db.scale = value; RM:UpdateBar(); RM:UpdateMover(); end,
-				min = 0.5, max = 5.0, step = 0.1
 			}
 		}
 	}
@@ -91,9 +82,7 @@ function RM:ToggleBar()
 end
 
 function RM:UpdateMover()
-	local scale = self.frame:GetScale()
-
-	self.frame.mover:Size(self.frame:GetWidth() * scale, self.frame:GetHeight() * scale)
+	self.frame.mover:Size(self.frame:GetWidth(), self.frame:GetHeight())
 end
 
 function RM:UpdateBar(first)
@@ -112,7 +101,6 @@ function RM:UpdateBar(first)
 		self.frame:SetPoint("CENTER")
 	end
 
-	self.frame:SetScale(self.db.scale or 1.0)
 	self.frame:SetWidth(width)
 	self.frame:SetHeight(height)
 
