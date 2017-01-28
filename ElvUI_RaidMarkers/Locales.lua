@@ -86,7 +86,7 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = "Выберите ориентацию панели меток";
 	L["Click to clear the mark."] = "Снять метку";
 	L["Click to mark the target."] = "Пометить цель";
-	L["Raid Markers Bar"] = "Панель меток";
+	L["Raid Markers Bar"] = "Панель рейдовых меток";
 	L["Raid Markers"] = "Рейдовые метки";
 	L["Select how the raid markers bar will be displayed."] = "Выберите, как будет отображаться панель меток.";
 	L["The direction that the mark frames will grow from the anchor."] = "Направление, в котором будут расположены кнопки меток относительно фиксатора.";

@@ -20,8 +20,9 @@ P["actionbar"]["raidmarkersbar"] = {
 -- Config
 local function InjectOptions()
 	E.Options.args.actionbar.args.raidMarkers = {
+		order = 1000,
 		type = "group",
-		name = L["Raid Markers"],
+		name = L["Raid Markers Bar"],
 		get = function(info) return E.db.actionbar.raidmarkersbar[ info[#info] ]; end,
 		set = function(info, value) E.db.actionbar.raidmarkersbar[ info[#info] ] = value; RM:UpdateBar(); end,
 		args = {
