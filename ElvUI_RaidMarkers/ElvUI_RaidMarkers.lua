@@ -84,7 +84,7 @@ local buttonMap = {
 function RM:UpdateBar(first)
 	if(first) then
 		self.frame:ClearAllPoints()
-		self.frame:SetPoint("CENTER")
+		self.frame:Point("CENTER")
 	end
 	
 	if(self.db.orient == "VERTICAL") then
@@ -103,15 +103,15 @@ function RM:UpdateBar(first)
 
 		if(self.db.orient == "VERTICAL") then
 			if(i == 9) then
-				button:SetPoint("TOP", 0, -self.db.buttonSpacing)
+				button:Point("TOP", 0, -self.db.buttonSpacing)
 			else
-				button:SetPoint("TOP", prev, "BOTTOM", 0, -self.db.buttonSpacing)
+				button:Point("TOP", prev, "BOTTOM", 0, -self.db.buttonSpacing)
 			end
 		else
 			if(i == 9) then
-				button:SetPoint("LEFT", self.db.buttonSpacing, 0)
+				button:Point("LEFT", self.db.buttonSpacing, 0)
 			else
-				button:SetPoint("LEFT", prev, "RIGHT", self.db.buttonSpacing, 0)
+				button:Point("LEFT", prev, "RIGHT", self.db.buttonSpacing, 0)
 			end
 		end
 	end
