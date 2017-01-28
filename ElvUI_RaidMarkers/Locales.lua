@@ -83,13 +83,13 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "ruRU")
 if L then
 	L["Automatic"] = "Автоматически"
-	L["Choose the orientation of the raid markers bar."] = true;
-	L["Click to clear the mark."] = true;
-	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
-	L["Raid Markers Bar"] = true;
-	L["Raid Markers"] = true;
-	L["Select how the raid markers bar will be displayed."] = true;
+	L["Choose the orientation of the raid markers bar."] = "Выберите ориентацию панели меток";
+	L["Click to clear the mark."] = "Снять метку";
+	L["Click to mark the target."] = "Пометить цель";
+	L["Orientation"] = "Направление";
+	L["Raid Markers Bar"] = "Панель меток";
+	L["Raid Markers"] = "Метки";
+	L["Select how the raid markers bar will be displayed."] = "Выберите, как будет отображаться панель меток.";
 end
 
 --Chinese (China, simplified)
