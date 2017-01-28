@@ -11,8 +11,8 @@ local RegisterStateDriver = RegisterStateDriver;
 
 -- Profile
 P["actionbar"]["raidmarkersbar"] = {
-	["visible"] = "auto",
-	["orient"] = "horizontal",
+	["visible"] = "AUTOMATIC",
+	["orient"] = "HORIZONTAL",
 	["buttonSize"] = 18,
 	["buttonSpacing"] = 5
 }
@@ -36,9 +36,9 @@ local function InjectOptions()
 				name = L["Visibility"],
 				desc = L["Select how the raid markers bar will be displayed."],
 				values = {
-					["hide"] = L["Hide"],
-					["show"] = L["Show"],
-					["auto"] = L["Automatic"]
+					["HIDE"] = L["Hide"],
+					["SHOW"] = L["Show"],
+					["AUTOMATIC"] = L["Automatic"]
 				}
 			},
 			orient = {
@@ -47,8 +47,8 @@ local function InjectOptions()
 				name = L["Orientation"],
 				desc = L["Choose the orientation of the raid markers bar."],
 				values = {
-					["horizontal"] = L["Horizontal"],
-					["vertical"] = L["Vertical"]
+					["HORIZONTAL"] = L["Horizontal"],
+					["VERTICAL"] = L["Vertical"]
 				}
 			},
 			buttonSize = {
@@ -68,12 +68,6 @@ local function InjectOptions()
 		}
 	}
 end
-
-local BUTTON_HEIGHT = 18
-local BUTTON_WIDTH = 18
-local BUTTON_DISTANCE = 5
-local FRAME_HEIGHT = 22
-local FRAME_WIDTH = 150
 
 local buttonMap = {
 	[1] = {RT = 1},	-- yellow/star
@@ -100,23 +94,18 @@ function RM:UpdateMover()
 end
 
 function RM:UpdateBar(first)
-	local height, width = FRAME_HEIGHT, FRAME_WIDTH
-
-	if(self.db.orient == "vertical") then
-		width = self.db.buttonSize + 3
-		height = (self.db.buttonSize * 9) + (self.db.buttonSpacing * 9)
-	else
-		width = (self.db.buttonSize * 9) + (self.db.buttonSpacing * 9)
-		height = self.db.buttonSize + 3
-	end
-
 	if(first) then
 		self.frame:ClearAllPoints()
 		self.frame:SetPoint("CENTER")
 	end
-
-	self.frame:SetWidth(width)
-	self.frame:SetHeight(height)
+	
+	if(self.db.orient == "VERTICAL") then
+		self.frame:Height((self.db.buttonSize + self.db.buttonSpacing) * #buttonMap + self.db.buttonSpacing);
+		self.frame:Width(self.db.buttonSize + (self.db.buttonSpacing*2));
+	else
+		self.frame:Width((self.db.buttonSize + self.db.buttonSpacing) * #buttonMap + self.db.buttonSpacing);
+		self.frame:Height(self.db.buttonSize + (self.db.buttonSpacing*2));
+	end
 
 	for i = 9, 1, -1 do
 		local button = self.frame.buttons[i]
@@ -124,27 +113,27 @@ function RM:UpdateBar(first)
 		button:Size(self.db.buttonSize);
 		button:ClearAllPoints()
 
-		if(self.db.orient == "vertical") then
+		if(self.db.orient == "VERTICAL") then
 			if(i == 9) then
-				button:SetPoint("TOP", 0, -3)
+				button:SetPoint("TOP", 0, -self.db.buttonSpacing)
 			else
 				button:SetPoint("TOP", prev, "BOTTOM", 0, -self.db.buttonSpacing)
 			end
 		else
 			if(i == 9) then
-				button:SetPoint("LEFT", 3, 0)
+				button:SetPoint("LEFT", self.db.buttonSpacing, 0)
 			else
 				button:SetPoint("LEFT", prev, "RIGHT", self.db.buttonSpacing, 0)
 			end
 		end
 	end
 
-	if(self.db.visible == "hide") then
+	if(self.db.visible == "HIDE") then
 		UnregisterStateDriver(self.frame, "visibility")
 		if(self.frame:IsShown()) then
 			self.frame:Hide()
 		end
-	elseif(self.db.visible == "show") then
+	elseif(self.db.visible == "SHOW") then
 		UnregisterStateDriver(self.frame, "visibility")
 		if(not self.frame:IsShown()) then
 			self.frame:Show()
