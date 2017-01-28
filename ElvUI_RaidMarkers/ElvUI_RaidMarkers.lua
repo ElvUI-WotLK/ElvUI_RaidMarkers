@@ -174,24 +174,6 @@ function RM:ButtonFactory()
 	end
 end
 
-function RM:InitBar()
-	self.frame:ClearAllPoints()
-	self.frame:SetPoint("CENTER")
-
-	local height, width = FRAME_HEIGHT, FRAME_WIDTH
-
-	if(self.db.orient == "vertical") then
-		width = BUTTON_WIDTH + 3
-		height = (BUTTON_HEIGHT * 9) + (BUTTON_DISTANCE * 9)
-	else
-		width = (BUTTON_WIDTH * 9) + (BUTTON_DISTANCE * 9)
-		height = BUTTON_HEIGHT + 3
-	end
-
-	self.frame:SetWidth(width)
-	self.frame:SetHeight(height)
-end
-
 function RM:Initialize()
 	self.db = E.db.actionbar.raidmarkersbar
 
