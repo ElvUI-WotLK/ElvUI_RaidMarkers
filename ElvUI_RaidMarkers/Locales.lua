@@ -7,10 +7,10 @@ L["Automatic"] = true;
 L["Choose the orientation of the raid markers bar."] = true;
 L["Click to clear the mark."] = true;
 L["Click to mark the target."] = true;
-L["Orientation"] = true;
 L["Raid Markers Bar"] = true;
 L["Raid Markers"] = true;
 L["Select how the raid markers bar will be displayed."] = true;
+L["The direction that the mark frames will grow from the anchor."] = true;
 
 if GetLocale() == "enUS" then return end
 
@@ -21,10 +21,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 -- Spanish
@@ -34,10 +34,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 -- French
@@ -47,10 +47,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 -- Korean
@@ -60,10 +60,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 -- Portuguese
@@ -73,10 +73,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 -- Russian
@@ -86,10 +86,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = "Выберите ориентацию панели меток";
 	L["Click to clear the mark."] = "Снять метку";
 	L["Click to mark the target."] = "Пометить цель";
-	L["Orientation"] = "Направление";
 	L["Raid Markers Bar"] = "Панель меток";
-	L["Raid Markers"] = "Метки";
+	L["Raid Markers"] = "Рейдовые метки";
 	L["Select how the raid markers bar will be displayed."] = "Выберите, как будет отображаться панель меток.";
+	L["The direction that the mark frames will grow from the anchor."] = "Направление, в котором будут расположены кнопки меток относительно фиксатора.";
 end
 
 --Chinese (China, simplified)
@@ -99,10 +99,10 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
 
 --Chinese (Taiwan, traditional)
@@ -112,8 +112,8 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
 	L["Select how the raid markers bar will be displayed."] = true;
+	L["The direction that the mark frames will grow from the anchor."] = true;
 end
