@@ -81,18 +81,6 @@ local buttonMap = {
 	[9] = {RT = 0}	-- clear target
 }
 
-function RM:ToggleBar()
-	if(self.db.show) then
-		self.frame:Show()
-	else
-		self.frame:Hide()
-	end
-end
-
-function RM:UpdateMover()
-	self.frame.mover:Size(self.frame:GetWidth(), self.frame:GetHeight())
-end
-
 function RM:UpdateBar(first)
 	if(first) then
 		self.frame:ClearAllPoints()
@@ -185,8 +173,6 @@ function RM:Initialize()
 	self:UpdateBar(true)
 
 	E:CreateMover(self.frame, "ElvUI_RMBarMover", L["Raid Markers Bar"])
-
-	self:UpdateMover()
 end
 
 E:RegisterModule(RM:GetName())
