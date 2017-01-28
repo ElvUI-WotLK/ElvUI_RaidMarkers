@@ -162,7 +162,6 @@ function RM:ButtonFactory()
 
 			button:SetScript("OnEnter", function(self)
 				GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
-				GameTooltip:SetText(L["ElvUI Raid Markers"])
 				GameTooltip:AddLine(i == 9 and L["Click to clear the mark."] or L["Click to mark the target."], 1, 1, 1)
 				GameTooltip:Show()
 			end)
