@@ -6,7 +6,6 @@ if not L then return end
 L["Choose the orientation of the raid markers bar."] = true;
 L["Click to clear the mark."] = true;
 L["Click to mark the target."] = true;
-L["ElvUI Raid Markers"] = true;
 L["Orientation"] = true;
 L["Raid Markers Bar"] = true;
 L["Raid Markers"] = true;
@@ -20,7 +19,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -33,7 +31,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -46,7 +43,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -59,7 +55,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -72,7 +67,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -85,7 +79,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -98,7 +91,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
@@ -111,7 +103,6 @@ if L then
 	L["Choose the orientation of the raid markers bar."] = true;
 	L["Click to clear the mark."] = true;
 	L["Click to mark the target."] = true;
-	L["ElvUI Raid Markers"] = true;
 	L["Orientation"] = true;
 	L["Raid Markers Bar"] = true;
 	L["Raid Markers"] = true;
