@@ -1,5 +1,5 @@
 -- English
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "enUS", true);
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "enUS", true);
 
 if not L then return end
 
@@ -15,7 +15,7 @@ L["The direction that the mark frames will grow from the anchor."] = true;
 if GetLocale() == "enUS" then return end
 
 -- German
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "deDE")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "deDE")
 if L then
 	L["Automatic"] = "Automatisch"
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -28,7 +28,7 @@ if L then
 end
 
 -- Spanish
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "esES")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "esES")
 if L then
 	L["Automatic"] = true;
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -41,7 +41,7 @@ if L then
 end
 
 -- French
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "frFR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "frFR")
 if L then
 	L["Automatic"] = "Auto"
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -54,7 +54,7 @@ if L then
 end
 
 -- Korean
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "koKR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "koKR")
 if L then
 	L["Automatic"] = "자동"
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -67,7 +67,7 @@ if L then
 end
 
 -- Portuguese
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "ptBR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "ptBR")
 if L then
 	L["Automatic"] = true;
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -80,7 +80,7 @@ if L then
 end
 
 -- Russian
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "ruRU")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "ruRU")
 if L then
 	L["Automatic"] = "Автоматически"
 	L["Choose the orientation of the raid markers bar."] = "Выберите ориентацию панели меток";
@@ -93,7 +93,7 @@ if L then
 end
 
 --Chinese (China, simplified)
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "zhCN")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "zhCN")
 if L then
 	L["Automatic"] = "自动"
 	L["Choose the orientation of the raid markers bar."] = true;
@@ -106,7 +106,7 @@ if L then
 end
 
 --Chinese (Taiwan, traditional)
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "zhTW")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "zhTW")
 if L then
 	L["Automatic"] = "自動"
 	L["Choose the orientation of the raid markers bar."] = true;
